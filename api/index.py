@@ -13,5 +13,5 @@ class handler(BaseHTTPRequestHandler):
     	'ip':'',
 		}
 	res=json.dumps(data,ensure_ascii=False,indent=4)
-        self.wfile.write(res)
+        self.wfile.write(res.encode('utf-8'))
         return

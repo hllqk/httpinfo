@@ -1,5 +1,11 @@
 from http.server import BaseHTTPRequestHandler
- 
+import json
+data={
+    'code':200,
+    'msg':'成功',
+    'ip':'',
+}
+res=json.dumps(data,ensure_ascii=False,indent=4)
  
 class handler(BaseHTTPRequestHandler):
  
@@ -7,5 +13,5 @@ class handler(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header('Content-type', 'text/plain')
         self.end_headers()
-        self.wfile.write("DearXuan's API by python!".encode())
+        self.wfile.write(res.encode())
         return

@@ -2,7 +2,6 @@ from http.server import BaseHTTPRequestHandler
 import json
 from bs4 import BeautifulSoup
 import requests
-import login
 def login(a,b):
     data={
 'token':"",
